@@ -1,0 +1,1 @@
+{PUBLIC IP: 44.198.138.178 ID: i-013c5c09f6b764091 AZ: us-east-1d}
