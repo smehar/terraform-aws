@@ -1,13 +1,13 @@
 provider "aws" {
   region     = "us-east-1"
-  shared_credentials_file = "../../secret/credentials"
+  shared_credentials_file = "/media/sf_ubuntuShared/secret/credentials"
 }
 terraform {
   backend "s3" {
     bucket = "terraform-backend-tp"
     key    = "tp5.tfstate"
     region = "us-east-1"
-    shared_credentials_file = "../../secret/credentials"    
+    shared_credentials_file = "/media/sf_ubuntuShared/secret/credentials"    
   }
 }
 data "aws_ami" "app_ami" {
@@ -35,7 +35,7 @@ resource "aws_instance" "myec2" {
    connection {
      type = "ssh"
      user = "ec2-user"
-     private_key = file("../../secret/devops.pem")
+     private_key = file("/media/sf_ubuntuShared/secret/devops.pem")
      host = self.public_ip
    }
   }

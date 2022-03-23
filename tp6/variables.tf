@@ -11,4 +11,3 @@ variable "aws_common_tag" {
     Name = "ec2-terraform-tp6"
   }
 }
-
